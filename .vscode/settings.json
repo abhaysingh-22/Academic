@@ -90,5 +90,15 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp"
-    }
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.preserveFocus": false,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.executorMap": {
+        "cpp": "cd $dir && g++ '$fileName' -o '$fileNameWithoutExt' && ./'$fileNameWithoutExt'",
+        "python": "cd $dir && python3 -u '$fileName'",
+        "java": "cd $dir && javac '$fileName' && java '$fileNameWithoutExt'"
+    },
+    "python.defaultInterpreterPath": "/usr/bin/python3"
 }
