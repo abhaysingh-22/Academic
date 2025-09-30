@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run C++ in Terminal",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "g++ '${file}' -o '${fileDirname}/${fileBasenameNoExtension}' && '${fileDirname}/${fileBasenameNoExtension}'",
+            "cwd": "${fileDirname}"
+        }
+    ]
+}
