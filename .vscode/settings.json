@@ -97,8 +97,8 @@
     "code-runner.saveFileBeforeRun": true,
     "code-runner.executorMap": {
         "cpp": "cd $dir && g++ '$fileName' -o '$fileNameWithoutExt' && ./'$fileNameWithoutExt'",
-        "python": "cd $dir && python3 -u '$fileName'",
+        "python": "cd $dir && /opt/homebrew/bin/python3.9 -u '$fileName'",
         "java": "cd $dir && javac '$fileName' && java '$fileNameWithoutExt'"
     },
-    "python.defaultInterpreterPath": "/usr/bin/python3"
+    "python.defaultInterpreterPath": "/opt/homebrew/bin/python3.9"
 }
