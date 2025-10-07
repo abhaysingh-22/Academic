@@ -30,6 +30,10 @@ class Book extends Publication {
     public double orderCopies(int number) {
         return saleCopy(number);
     }
+
+    public void displayInfo() {
+        System.out.println("Book: " + title + " by " + author + " | Price: Rs." + price + " | Total copies sold: " + copies);
+    }
 }
 
 // Magazine class
@@ -45,6 +49,10 @@ class Magazine extends Publication {
     public double receiveIssue(int qty) {
         this.orderQty = qty;
         return saleCopy(qty);
+    }
+
+    public void displayInfo() {
+        System.out.println("Magazine: " + title + " | Issue: " + currentIssue + " | Price: Rs." + price + " | Total copies sold: " + copies + " | Last order quantity: " + orderQty);
     }
 }
 
@@ -65,7 +73,9 @@ public class Polymorphism {
             System.out.println("1. Order Book Copies");
             System.out.println("2. Order Magazine Copies");
             System.out.println("3. Display Total Publication Sales");
-            System.out.println("4. Exit");
+            System.out.println("4. Display Book Info");
+            System.out.println("5. Display Magazine Info");
+            System.out.println("6. Exit");
             System.out.print("Enter your choice: ");
             choice = sc.nextInt();
 
@@ -91,13 +101,21 @@ public class Polymorphism {
                     break;
 
                 case 4:
+                    book.displayInfo();
+                    break;
+
+                case 5:
+                    magazine.displayInfo();
+                    break;
+
+                case 6:
                     System.out.println("Exiting... Thank you!");
                     break;
 
                 default:
                     System.out.println("Invalid choice! Please try again.");
             }
-        } while (choice != 4);
+        } while (choice != 6);
 
         sc.close();
     }
